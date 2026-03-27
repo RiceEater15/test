@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/calendar.css">
+  <title>Lincoln East Student Hub</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="https://ehs.lps.org/wp-content/uploads/sites/80/2019/04/ehs.png" alt="Lincoln East Logo">
+      <h1>Lincoln East Student Hub</h1>
+    </div>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="left-column">
+    <span id="userName"></span>
+    <h2 id="monthTitle"></h2>
+    <div class="calendar-header">
+        <button id="prevMonth">&lt; Prev</button>
+        <button id="nextMonth">Next &gt;</button>
+    </div>
+    <div class="calendar-days"></div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+      <label>Time</label>
+      <input type="time" id="timeInput" min="12:30" max="21:25">
+      <label>Duration</label>
+      <select id="duration">
+        <option value="15">15 minutes</option>
+        <option value="20">20 minutes</option>
+        <option value="25">25 minutes</option>
+      </select>
+      <button id="bookBtn">Book Session</button>
+    </div>
+    <div class="right-column">
+      <h3>Your Tutor Sessions</h3>
+      <ul id="mySessions"></ul>
+      <h3>All Tutor Sessions</h3>
+      <ul id="allSessions"></ul>
+    </div>
+  </div>
+</body>
+<script type="module"src="js/auth.js"></script>
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/calendar.js"></script>
+  <script src="js/hamburger.js"></script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/form.css">
+  <title>Lincoln East Student Hub</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="https://ehs.lps.org/wp-content/uploads/sites/80/2019/04/ehs.png" alt="Lincoln East Logo">
+      <h1>Lincoln East Student Hub</h1>
+    </div>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+    </ul>
+  </nav>
+<h1 class="title">Account Information</h1>
+<div class="account-wrapper">
+  <div class="account-left centered-form">
+    <form class="form" id="auth-form">
+      <div class="flex-column">
+        <label>Email</label>
+      </div>
+      <div class="inputForm email">
+        <input placeholder="Enter your Email" class="input" type="email" id="email"/>
+      </div>
+      <div class="flex-column">
+        <label>Password</label>
+      </div>
+      <div class="inputForm password">
+        <input placeholder="Enter your Password" class="input" type="password" id="password"/>
+      </div>
+      <div class="flex-row">
+        <div>
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+      </div>
+      <button type="submit" class="button-submit" id="submit-btn">
+      Sign Up
+      </button>
+      <button type="button" class="button-submit" id="logout-btn" style="display:none;margin-top:10px;">
+      Log Out
+      </button>
+      <p class="p" id="toggle-text">
+        Already have an account?
+        <span class="span" id="toggle-auth">Sign In</span>
+      </p>
+      <p class="p line">Or Sign In With</p>
+      <div class="flex-row">
+        <button type="button" class="btn google" id="google-btn">
+          Google
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="display-name card">
+    <h3>Change Display Name</h3>
+    <input type="text"
+      id="displayNameInput"
+      placeholder="Enter new display name"/>
+    <button id="saveNameBtn" class="btn">
+      Save Name
+    </button>
+    <p id="currentName" style="margin-top:10px;"></p>
+  </div>
+</div>
+<script src="js/hamburger.js"></script>
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+</body>
+</html>
