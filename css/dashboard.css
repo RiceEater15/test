@@ -1,0 +1,42 @@
+
+.progress-bar {
+  background: #2e2e2e;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 12px;
+  margin-top: 12px;
+}
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #0a4fb3, #3b82f6);
+}
+.btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #0a4fb3, #3b82f6);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: none;
+}
+#filter {
+  margin-bottom: 16px;
+  display: block;
+  stroke: black;
+}
+#filter option {
+  background-color: #000;
+  color: #fff;
+}

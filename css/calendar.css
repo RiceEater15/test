@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+}
+.left-column {
+  flex: 2;
+}
+.right-column {
+  flex: 1;
+  background-color: #2b2b2b;
+  padding: 15px;
+  border-radius: 12px;
+}
+h1,h2,h3 {
+  text-align: center;
+  color: #eaf3ff;
+}
+.calendar-days,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+.calendar-days div {
+  font-weight: bold;
+  color: #ffffff;
+  padding: 6px 0;
+}
+.calendar-grid div {
+  background-color: #1f1f1f;
+  padding: 12px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.calendar-grid div:hover {
+  background-color: #333;
+}
+.calendar-grid div.selected {
+  background-color: #0a4fb3;
+  color: white;
+}
+.calendar-grid div.disabled {
+  background-color: transparent;
+  cursor: default;
+}
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+}
+button {
+  margin-top: 15px;
+  background-color: #0a4fb3;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #3b82f6;
+}
+#mySessions {
+  list-style: none;
+  padding: 0;
+}
+#mySessions li {
+  background-color: #1f1f1f;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  color: #f1f1f1;
+}
+#allSessions {
+  list-style: none;
+  padding: 0;
+}
+#allSessions li {
+  background-color: #1f1f1f;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  color: #f1f1f1;
+}
+
+@media (max-width:900px) {
+  .container { flex-direction: column; }
+  .left-column,.right-column { width:100%; }
+}
